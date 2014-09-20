@@ -1,0 +1,44 @@
+
+---
+ 
+## Motor Trend MPG Appication
+ 
+- We build an interactive model to estimate miles per gallon
+- This is done using vehicle weight and number of vehicle cylinders
+- The application is interactive and updates based on user's selected inputs
+ 
+---
+ 
+## Data used for Application
+ 
+We build a regression model that estimates miles per gallon based on vehicle weight and vehicle cylinders
+ 
+- Variable mpg is miles per gallon of vehicle
+- Variable wt is weight of vehicle in thousands of pounds
+- Variable cyl is the number of cylinders in vehicles engine
+ 
+---
+ 
+## Application is Based on This Model
+ 
+```{r}
+model <- lm(mpg ~ wt + cyl, data = mtcars)
+```
+ 
+---
+ 
+## Here are the results of the model
+ 
+```{r, echo=FALSE}
+model.summary <- summary(model)
+model.summary[4]
+model.summary[8]
+```
+ 
+---
+ 
+## Application Demonstration
+ 
+The web version of this interactive Shiny application is located at this URL:
+ 
+http://trueapp2.shinyapps.io/ShinyApp
